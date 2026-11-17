@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>پنل مدیریت</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body { padding: 0 0 80px; }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 24px 5%; }
+    h2 { margin: 36px 0 14px; color: var(--gold-light); }
+    .box { background: var(--surface); border-radius: var(--radius); padding: 20px; }
+    label { display: block; color: var(--muted); font-size: .9rem; margin-bottom: 10px; }
+    input, textarea, select {
+      width: 100%; margin-top: 6px; padding: 10px 12px;
+      background: var(--bg); color: var(--text);
+      border: 1px solid rgba(212,175,55,.25); border-radius: 10px;
+    }
+    textarea { min-height: 70px; resize: vertical; }
+    .grid2, .grid3 { display: grid; gap: 12px; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+    .item {
+      background: var(--surface); border: 1px solid rgba(212,175,55,.15);
+      border-radius: var(--radius); padding: 18px; margin-bottom: 16px;
+    }
+    .row { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; margin-top: 12px; }
+    .del {
+      background: none; border: 1px solid #e57373; color: #e57373;
+      padding: 8px 16px; border-radius: 999px; cursor: pointer;
+    }
+    .upl input[type=file] { border: none; padding: 6px 0; }
+    .upl { margin: 0; }
+    .sticky {
+      position: fixed; bottom: 0; left: 0; right: 0; z-index: 30;
+      background: rgba(15,13,11,.95); backdrop-filter: blur(10px);
+      border-top: 1px solid rgba(212,175,55,.25); padding: 14px 5%;
+      display: flex; gap: 16px; align-items: center; justify-content: space-between; flex-wrap: wrap;
+    }
+    .status { font-size: .95rem; }
+    .status.ok { color: #8bd38b; }
+    .status.err { color: #e57373; }
+    .btn:disabled { opacity: .5; cursor: wait; transform: none; box-shadow: none; }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <span class="logo">پنل مدیریت</span>
+    <a href="index.html" style="color:var(--muted)">← بازگشت به سایت</a>
+  </header>
+
+  <div class="wrap">
+    <h2>اتصال به گیت‌هاب و تنظیمات فروشگاه</h2>
+    <div class="box" id="settings"></div>
+
+    <h2>کالکشن‌ها</h2>
+    <div id="collections"></div>
+
+    <h2>محصولات</h2>
+    <div id="products"></div>
+  </div>
+
+  <div class="sticky">
+    <span class="status ok" id="status">آماده</span>
+    <button class="btn" id="publish">ذخیره و انتشار در گیت‌هاب</button>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/github.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
