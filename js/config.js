@@ -2,7 +2,7 @@
 const SHOP = {
   "name": "GHΛZ BOUTIQUE",
   "tagline": "مد روز، با کیفیت و سلیقه",
-  "domain": "https://amirrassaf30-code.github.io/GHAZ_BOUTIQUE/",
+  "domain": "https://username.github.io/boutique",
   "currency": "تومان",
   "whatsapp": "989199147277",
   "bankName": "بانک سامان(بلو)",
